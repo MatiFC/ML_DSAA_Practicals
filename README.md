@@ -13,6 +13,8 @@ corresponding practical class.
 | Week 2 | The machine-learning process | [Open](notebooks/week_02/week_02_ml_pipeline.ipynb) | Not yet released |
 | Week 3 | Deepening exploration: quality, missing values and outliers | [Open](notebooks/week_03/week_03_deepen_exploration.ipynb) | Not yet released |
 | Week 3 | Deepening exploration: a price, not a class | [Open](notebooks/week_03/week_03_deepen_exploration_regression.ipynb) | Not yet released |
+| Week 4 | Feature work and dimensionality reduction before selection | [Open](notebooks/week_04/week_04_feature_work_classification.ipynb) | Not yet released |
+| Week 4 | Feature work on a regression target | [Open](notebooks/week_04/week_04_feature_work_regression.ipynb) | Not yet released |
 
 Solutions are separate files, so an update will not replace the notebook in
 which you have been working.
