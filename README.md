@@ -67,8 +67,12 @@ jupyter notebook
 ```
 
 Open the notebook for the current week under `notebooks/`. Keep the repository
-folder structure unchanged because the notebooks load files from `data/` and
-`assets/` by relative path.
+folder structure unchanged because the notebooks load files from `data/`,
+`logs/` and `assets/` by relative path.
+
+Week 3 cleans the raw datasets, writing the cleaned files to `data/interim/` and
+its cleaning logs to `logs/`, and later weeks read both. Copies of those files
+are supplied, so each week runs on its own; running Week 3 replaces them.
 
 ## Get new notebooks and solutions
 
@@ -88,6 +92,7 @@ Students using ZIP downloads should download and extract a fresh copy.
 notebooks/      Unsolved practical notebooks
 solutions/      Solutions released after each practical
 data/           Data opened by the notebooks
+logs/           Cleaning logs that later notebooks read
 assets/         Diagrams used by the notebooks
 project/        Course project materials
 environment.yml Conda environment specification
