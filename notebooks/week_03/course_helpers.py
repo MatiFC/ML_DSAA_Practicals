@@ -15,6 +15,9 @@ hands it the folder.
 from __future__ import annotations
 
 import json
+import hashlib
+import warnings
+from copy import deepcopy
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -78,7 +81,7 @@ class CleaningLog:
         if not reason.strip():
             raise ValueError("every cleaning step needs a stated reason")
         self.steps.append(
-            CleaningStep(column, action, reason, int(rows_affected), carries)
+            CleaningStep(column, action, reason, int(rows_affected), deepcopy(carries))
         )
 
     def records(self) -> list[dict]:
@@ -134,7 +137,7 @@ class CleaningLog:
         """What the step for `column` carries forward, or None if it carries nothing."""
         for step in self.steps:
             if step.column == column:
-                return step.carries
+                return deepcopy(step.carries)
         return None
 
     def __len__(self) -> int:
